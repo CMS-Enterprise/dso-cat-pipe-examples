@@ -1,4 +1,4 @@
-FROM artifactory.cloud.cms.gov/docker/maven:3.9-amazoncorretto-11
+FROM artifactory.cloud.cms.gov/docker/maven:3.9-amazoncorretto-11-debian
 RUN addgroup -S nonroot \
     && adduser -S nonroot -G nonroot
 USER nonroot
