@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "var.image_id"
+  ami           = var.image_id
   instance_type = "t2.micro"
 
   tags = {
