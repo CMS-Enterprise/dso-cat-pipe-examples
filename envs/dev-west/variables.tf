@@ -1,5 +1,5 @@
-variable "image_id" {
+variable "bucket_name" {
   type        = string
-  description = "The id of the machine image (AMI) to use for the server."
-  default     = "ami-830c94e3"
+  description = "The name of the bucket that is being created with terraform."
+  default     = "test-bucket-1234"
 }

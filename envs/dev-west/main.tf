@@ -1,23 +1,13 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
-
-  required_version = ">= 1.2.0"
-}
-
+# Configure the AWS provider
 provider "aws" {
-  region  = "us-west-2"
+  region = "us-west-2"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = var.image_id
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "cbc-devops"
+# Create a S3 bucket
+resource "aws_s3_bucket" "terraform_state" {
+  bucket		  = var.bucket_name
+  
+  lifecycle {
+    prevent_destroy = false
   }
 }

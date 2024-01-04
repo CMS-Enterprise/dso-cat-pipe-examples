@@ -1,1 +1,1 @@
-image_id = "ami-830c94e3"
+bucket_name = "test-bucket-1234"
